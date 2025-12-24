@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from model.model import predict_sentiment_3sentiment, predict_sentiment_5sentiment
+from model import predict_sentiment_3sentiment, predict_sentiment_5sentiment
 import pandas as pd
 
 # Khởi tạo Flask app
