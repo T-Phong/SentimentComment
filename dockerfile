@@ -1,4 +1,4 @@
-# 1. Dùng Python 3.10 (tương thích tốt với Faiss/Torch mới)
+# 1. Dùng Python 3.10 (tương thích tốt với Faiss/Torch mới) 
 FROM python:3.10-slim
 # 1. Tắt buffering
 ENV PYTHONUNBUFFERED=1
@@ -30,4 +30,4 @@ EXPOSE 7860
 
 # 9. Lệnh chạy server
 # "app:app" nghĩa là: trong file app.py, tìm object tên là app (biến Flask)
-CMD ["gunicorn", "-b", "0.0.0.0:7860", "api:app", "--timeout", "120", "--workers", "2"]
+CMD ["gunicorn", "-b", "0.0.0.0:7860", "app:app", "--timeout", "120", "--workers", "2"]
