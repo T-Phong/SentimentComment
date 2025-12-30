@@ -4,7 +4,7 @@ import torch
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 import torch.nn.functional as F
 
-model_name_3sentiment = "phongnt251199/phobert-sentiment-reviews-v3"
+model_name_3sentiment = "phongnt251199/phobert-sentiment-reviews-v5"
 model_name_5sentiment = "phongnt251199/phobert-sentiment-reviews-v4"
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 

@@ -1,9 +1,11 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from model import predict_sentiment_3sentiment, predict_sentiment_5sentiment
 import pandas as pd
 
 # Khởi tạo Flask app
 app = Flask(__name__)
+CORS(app)
 
 # Xử lý encoding cho tiếng Việt để hiển thị đúng trong response
 app.config['JSON_AS_ASCII'] = False

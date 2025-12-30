@@ -3,3 +3,4 @@ torch
 flask
 pandas
 openpyxl
+flask-cors
