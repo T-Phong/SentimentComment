@@ -205,3 +205,26 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Virtual Environments
+.env
+.venv
+env/
+venv/
+
+# Hugging Face cache
+# Các model du?c t?i t? Hub, không c?n luu tr? trong git
+.cache/
+huggingface/
