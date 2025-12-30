@@ -1,6 +1,7 @@
-transformers
-torch
 flask
+flask-cors
 pandas
 openpyxl
-flask-cors
+torch
+transformers
+gunicorn
