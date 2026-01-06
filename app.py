@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import logging
+from pyvi import ViTokenizer
 
 # Cấu hình logging cho app
 logging.basicConfig(level=logging.INFO)
@@ -41,6 +42,7 @@ def predict():
     # Gọi hàm dự đoán từ model
     try:
         if sentiment_type == "3sentiment":
+            text_to_predict = ViTokenizer.tokenize(text_to_predict)
             sentiment, score = predict_sentiment_3sentiment(text_to_predict)
         elif sentiment_type == "5sentiment":
             sentiment, score = predict_sentiment_5sentiment(text_to_predict)
