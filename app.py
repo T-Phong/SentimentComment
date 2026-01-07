@@ -112,7 +112,7 @@ def predict_batch():
                 sentiment, score = predict_sentiment_3sentiment(comment)
             elif sentiment_type == "5sentiment":
                 sentiment, score = predict_sentiment_5sentiment(comment)
-            results.append({"comment": comment, "sentiment": sentiment, "confidence": score})
+            results.append({"comment": comment, "sentiment": sentiment, "confidence": f"{score:.2%}"})
         
         return jsonify(results)
     except Exception as e:
